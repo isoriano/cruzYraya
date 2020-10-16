@@ -1,20 +1,20 @@
-<h1>Current Player: {{ player }}</h1>
+<div class="game-header">
+  <button class="new-game" (click)="newGame()">Start new Game</button>
 
-<button (click)="newGame()">Start new Game</button>
+  <span *ngIf="!winner">Player {{ winner }} won the game!</span>
+</div>
 
-<h2 *ngIf="winner">Player {{ winner }} won the game!</h2>
-
-<main>
+<div class="game-container">
   <div class="score-grid">
     <div></div>
     <div class="score-column">
       <i class="icon small icon_o"></i>
-      <span>1</span>
+      <span>{{ oScore }}</span>
     </div>
     <div></div>
     <div class="score-column">
       <i class="icon small icon_x"></i>
-      <span>{{xAmount}}</span>
+      <span>{{ xScore }}</span>
     </div>
     <div></div>
   </div>
@@ -22,8 +22,8 @@
     <app-square
       *ngFor="let value of squares; let i = index"
       [value]="value"
-      (click)="makeMove(i)"
+      (click)="makeMove(i, false)"
     >
     </app-square>
   </div>
-</main>
+</div>

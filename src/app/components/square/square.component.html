@@ -1,1 +1,3 @@
-<button [ngClass]="'icon icon_' + value"></button>
+<button>
+  <i *ngIf="value" [ngClass]="'animated bounceIn icon icon_' + value"></i>
+</button>

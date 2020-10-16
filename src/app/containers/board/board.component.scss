@@ -1,18 +1,45 @@
-.score-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 16px auto 1fr;
-  padding: 1rem 0;
-  .score-column {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    font-size: 2rem;
-    color: #707070;
+:host {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  .game-header {
+    margin: auto;
+    .new-game {
+      width: 10rem;
+      background-color: #912e69;
+      border: 1px solid #912e69;
+      color: #fff;
+      border-radius: 5px;
+      padding: 0.5rem;
+      &:hover {
+        background-color: #912e6996;
+      }
+    }
+    span {
+      color: #fff;
+    }
   }
-}
-.board-grid {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2px;
-  background-color: #707070;
+  .game-container {
+    margin: auto;
+    width: 60%;
+    .score-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 16px auto 1fr;
+      padding: 1rem 0;
+      .score-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+    .board-grid {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2px;
+      background-color: #fff;
+    }
+  }
+  // TODO: apply responsive styling
 }
