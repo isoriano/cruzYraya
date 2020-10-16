@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+.site--no-outlines,
+.site--no-outlines * {
+  outline: none;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: center;
+  &.small {
+    background-size: 30px;
+    width: 30px;
+  }
+  &.icon_x {
+    background-image: url("/assets/images/cross.svg");
+  }
+  &.icon_o {
+    background-image: url("/assets/images/circle.svg");
+  }
+}
